@@ -100,7 +100,7 @@ export function HomePage() {
       <section className="relative flex flex-col items-center w-full h-auto overflow-visible mt-28">
         <div className="absolute top-[-7rem] left-0 z-10 flex items-center justify-center w-full h-[calc(100%+10rem)]  hero-video">
           <video
-            src="/public/videos/hero.mp4"
+            src="/videos/hero.mp4"
             autoPlay
             muted
             loop
@@ -191,7 +191,7 @@ export function HomePage() {
       {/*   ---------------------- Stats Section ---------------------- */}
       <section className="relative z-30 w-full h-auto mx-0 bg-transparent shadow-lg mb-38">
         <img
-          src="/public/images/stats.png"
+          src="/images/stats.png"
           alt="Background"
           className="relative w-full h-auto px-0 z-index-0"
         />
@@ -205,7 +205,7 @@ export function HomePage() {
           >
             <img
               className="w-15 h-15"
-              src="/public/images/icon.png"
+              src="/images/icon.png"
               alt="Lead Intelligence"
             />
             <h3 className="text-xl font-bold text-white">Lead Intelligence</h3>
@@ -227,7 +227,7 @@ export function HomePage() {
           >
             <img
               className="w-15 h-15"
-              src="/public/images/icon (1).png"
+              src="/images/icon (1).png"
               alt="Focus on what converts"
             />
             <h3 className="text-xl font-bold text-white">Smart Targeting</h3>
@@ -249,7 +249,7 @@ export function HomePage() {
           >
             <img
               className="w-15 h-15"
-              src="/public/images/icon (2).png"
+              src="/images/icon (2).png"
               alt="Focus on what converts"
             />
             <h3 className="text-xl font-bold text-white">
@@ -273,7 +273,7 @@ export function HomePage() {
           >
             <img
               className="w-15 h-15"
-              src="/public/images/icon (3).png"
+              src="/images/icon (3).png"
               alt="Instant Verification"
             />
             <h3 className="text-xl font-bold text-white">
@@ -309,12 +309,12 @@ export function HomePage() {
             style={{ maxWidth: "100vw", margin: "0 calc(-50vw + 50%)" }}
           >
             <img
-              src="/public/images/Ellipse 63.png"
+              src="/images/Ellipse 63.png"
               alt="ai-leads"
               className="object-fill w-1/2 h-full"
             />
             <img
-              src="/public/images/Ellipse 64.png"
+              src="/images/Ellipse 64.png"
               alt="ai-leads"
               className="object-fill w-1/2 h-full"
             />
@@ -346,7 +346,7 @@ export function HomePage() {
                   </p>
 
                   <img
-                    src="/public/images/yellow-light.png"
+                    src="/images/yellow-light.png"
                     alt="bot"
                     className="absolute -right-12 object-contain w-auto top-1/2 translate-y-[-50%] h-32 z-100"
                   />
@@ -374,7 +374,7 @@ export function HomePage() {
                     numbers.
                   </p>
                   <img
-                    src="/public/images/yellow-light.png"
+                    src="/images/yellow-light.png"
                     alt="bot"
                     className="absolute -right-12 object-contain w-auto top-1/2 translate-y-[-50%] h-32 z-10"
                   />
@@ -404,7 +404,7 @@ export function HomePage() {
                   </p>
 
                   <img
-                    src="/public/images/yellow-light.png"
+                    src="/images/yellow-light.png"
                     alt="bot"
                     className="absolute -right-12 object-contain w-auto top-1/2 translate-y-[-50%] h-32 z-100"
                   />
@@ -432,7 +432,7 @@ export function HomePage() {
                     numbers.
                   </p>
                   <img
-                    src="/public/images/yellow-light.png"
+                    src="/images/yellow-light.png"
                     alt="bot"
                     className="absolute -right-12 object-contain w-auto top-1/2 translate-y-[-50%] h-32 z-10"
                   />
@@ -524,7 +524,7 @@ export function HomePage() {
               <div className="flex flex-row items-center justify-center w-full h-full gap-2 py-2">
                 <img
                   className="object-contain w-6 h-6"
-                  src="/public/images/close.png"
+                  src="/images/close.png"
                   alt="x icon"
                 />
               </div>
@@ -532,7 +532,7 @@ export function HomePage() {
               <div className="flex flex-row items-center justify-center w-full h-full gap-2 bg-[#D9D9D9] py-2">
                 <img
                   className="object-contain w-6 h-6"
-                  src="/public/images/close.png"
+                  src="/images/close.png"
                   alt="x icon"
                 />
               </div>
@@ -540,7 +540,7 @@ export function HomePage() {
               <div className="flex flex-row items-center justify-center w-full h-full gap-2 py-2">
                 <img
                   className="object-contain w-6 h-6"
-                  src="/public/images/close.png"
+                  src="/images/close.png"
                   alt="x icon"
                 />
               </div>
@@ -548,7 +548,7 @@ export function HomePage() {
               <div className="flex flex-row items-center justify-center w-full h-full gap-2 bg-[#D9D9D9] py-2">
                 <img
                   className="object-contain w-6 h-6"
-                  src="/public/images/close.png"
+                  src="/images/close.png"
                   alt="x icon"
                 />
               </div>
@@ -556,7 +556,7 @@ export function HomePage() {
               <div className="flex flex-row items-center justify-center w-full h-full gap-2 py-2">
                 <img
                   className="object-contain w-6 h-6"
-                  src="/public/images/close.png"
+                  src="/images/close.png"
                   alt="x icon"
                 />
               </div>
@@ -590,7 +590,7 @@ export function HomePage() {
               <div className="flex flex-row items-center justify-end w-full h-full gap-4 mb-10">
                 <img
                   className="object-contain w-full h-full"
-                  src="/public/images/power.png"
+                  src="/images/power.png"
                   alt="icon"
                 />
               </div>
@@ -606,7 +606,7 @@ export function HomePage() {
                   Real-Time <br /> Lead <br /> Filtering
                 </h2>
                 <div className="flex flex-row items-center justify-end w-full h-full gap-4 mb-0">
-                  <img src="/public/images/power-arrow.png" alt="icon" />
+                  <img src="/images/power-arrow.png" alt="icon" />
                 </div>
               </div>
               <div
@@ -619,7 +619,7 @@ export function HomePage() {
                   AI Lead <br /> Scoring (Hot / <br /> Warm / Cold)
                 </h2>
                 <div className="flex flex-row items-center justify-end w-full h-full gap-4 mb-0">
-                  <img src="/public/images/power-arrow.png" alt="icon" />
+                  <img src="/images/power-arrow.png" alt="icon" />
                 </div>
               </div>
               <div
@@ -632,7 +632,7 @@ export function HomePage() {
                   Multi- <br /> Channel <br /> Validation
                 </h2>
                 <div className="flex flex-row items-center justify-end w-full h-full gap-4 mb-0">
-                  <img src="/public/images/power-arrow.png" alt="icon" />
+                  <img src="/images/power-arrow.png" alt="icon" />
                 </div>
               </div>
               <div
@@ -645,7 +645,7 @@ export function HomePage() {
                   CRM & Ad <br /> Platform <br /> Integrations
                 </h2>
                 <div className="flex flex-row items-center justify-end w-full h-full gap-4 mb-0">
-                  <img src="/public/images/power-arrow.png" alt="icon" />
+                  <img src="/images/power-arrow.png" alt="icon" />
                 </div>
               </div>
               <div
@@ -658,7 +658,7 @@ export function HomePage() {
                   Lead <br /> Warmups & <br /> Follow-ups
                 </h2>
                 <div className="flex flex-row items-center justify-end w-full h-full gap-4 mb-0">
-                  <img src="/public/images/power-arrow.png" alt="icon" />
+                  <img src="/images/power-arrow.png" alt="icon" />
                 </div>
               </div>
               <div
@@ -671,7 +671,7 @@ export function HomePage() {
                   Verified <br /> Lead <br /> Marketplace
                 </h2>
                 <div className="flex flex-row items-center justify-end w-full h-full gap-4 mb-0">
-                  <img src="/public/images/power-arrow.png" alt="icon" />
+                  <img src="/images/power-arrow.png" alt="icon" />
                 </div>
               </div>
             </div>
@@ -718,12 +718,12 @@ export function HomePage() {
                 </p>
 
                 <img
-                  src="/public/images/step1.png"
+                  src="/images/step1.png"
                   alt="icon"
                   className="absolute bottom-[-50px] left-[-50px]  w-26 h-26"
                 />
                 <img
-                  src="/public/images/upload.png"
+                  src="/images/upload.png"
                   alt="icon"
                   className="absolute top-[-50px] w-32 h-32 right-[-50px]"
                 />
@@ -743,12 +743,12 @@ export function HomePage() {
                 </p>
 
                 <img
-                  src="/public/images/step1.png"
+                  src="/images/step1.png"
                   alt="icon"
                   className="absolute bottom-[-50px] left-[-50px]  w-26 h-26"
                 />
                 <img
-                  src="/public/images/upload.png"
+                  src="/images/upload.png"
                   alt="icon"
                   className="absolute top-[-50px] w-32 h-32 right-[-50px]"
                 />
@@ -768,12 +768,12 @@ export function HomePage() {
                 </p>
 
                 <img
-                  src="/public/images/step1.png"
+                  src="/images/step1.png"
                   alt="icon"
                   className="absolute bottom-[-50px] left-[-50px]  w-26 h-26"
                 />
                 <img
-                  src="/public/images/upload.png"
+                  src="/images/upload.png"
                   alt="icon"
                   className="absolute top-[-50px] w-32 h-32 right-[-50px]"
                 />
@@ -803,7 +803,7 @@ export function HomePage() {
               <div className="flex flex-col items-center justify-center w-full h-[200px] gap-4">
                 <img
                   className="object-contain w-auto h-full"
-                  src="/public/images/zoho.png"
+                  src="/images/zoho.png"
                   alt="icon"
                 />
               </div>
@@ -813,7 +813,7 @@ export function HomePage() {
               <div className="flex flex-col items-center justify-center w-full h-[200px] gap-4">
                 <img
                   className="object-contain w-auto h-full"
-                  src="/public/images/hubspot.png"
+                  src="/images/hubspot.png"
                   alt="icon"
                 />
               </div>
@@ -823,7 +823,7 @@ export function HomePage() {
               <div className="flex flex-col items-center justify-center w-full h-[200px] gap-4">
                 <img
                   className="object-contain w-auto h-full"
-                  src="/public/images/apollo.png"
+                  src="/images/apollo.png"
                   alt="icon"
                 />
               </div>
@@ -833,7 +833,7 @@ export function HomePage() {
               <div className="flex flex-col items-center justify-center w-full h-[200px] gap-4">
                 <img
                   className="object-contain w-auto h-full"
-                  src="/public/images/neverbounce.png"
+                  src="/images/neverbounce.png"
                   alt="icon"
                 />
               </div>
@@ -843,7 +843,7 @@ export function HomePage() {
               <div className="flex flex-col items-center justify-center w-full h-[200px] gap-4">
                 <img
                   className="object-contain w-auto h-full"
-                  src="/public/images/zoho.png"
+                  src="/images/zoho.png"
                   alt="icon"
                 />
               </div>
@@ -853,7 +853,7 @@ export function HomePage() {
               <div className="flex flex-col items-center justify-center w-full h-[200px] gap-4">
                 <img
                   className="object-contain w-auto h-full"
-                  src="/public/images/hubspot.png"
+                  src="/images/hubspot.png"
                   alt="icon"
                 />
               </div>
@@ -863,7 +863,7 @@ export function HomePage() {
               <div className="flex flex-col items-center justify-center w-full h-[200px] gap-4">
                 <img
                   className="object-contain w-auto h-full"
-                  src="/public/images/apollo.png"
+                  src="/images/apollo.png"
                   alt="icon"
                 />
               </div>
@@ -873,7 +873,7 @@ export function HomePage() {
               <div className="flex flex-col items-center justify-center w-full h-[200px] gap-4">
                 <img
                   className="object-contain w-auto h-full"
-                  src="/public/images/neverbounce.png"
+                  src="/images/neverbounce.png"
                   alt="icon"
                 />
               </div>
@@ -899,7 +899,7 @@ export function HomePage() {
           >
             <div className="flex flex-col items-center justify-center w-full h-full gap-0">
               <img
-                src="/public/images/shield.png"
+                src="/images/shield.png"
                 alt="icon"
                 className="object-contain w-full h-full"
               />
@@ -951,7 +951,7 @@ export function HomePage() {
           <div className="flex flex-row w-full h-full gap-10">
             <div className="w-[40%]">
               <img
-                src="/public/images/ai.png"
+                src="/images/ai.png"
                 alt="icon"
                 className="object-contain w-full h-full"
               />
@@ -998,7 +998,7 @@ export function HomePage() {
                           </h2>
                           <div className="flex flex-row items-center justify-end w-full h-full gap-4 mb-0">
                             <img
-                              src="/public/images/power-arrow.png"
+                              src="/images/power-arrow.png"
                               alt="icon"
                             />
                           </div>
@@ -1055,7 +1055,7 @@ export function HomePage() {
                           </h2>
                           <div className="flex flex-row items-center justify-end w-full h-full gap-4 mb-0">
                             <img
-                              src="/public/images/power-arrow.png"
+                              src="/images/power-arrow.png"
                               alt="icon"
                             />
                           </div>
@@ -1118,7 +1118,7 @@ export function HomePage() {
               <div className="flex flex-row items-center justify-center gap-4 pt-4">
                 <button className="text-white hero-btn">Learn More</button>
                 <button className="flex flex-row items-center justify-center gap-2 text-white possibilities-vid-btn">
-                  <img src="/public/images/play-icon.png" alt="icon" />
+                  <img src="/images/play-icon.png" alt="icon" />
                   Watch a Video
                 </button>
               </div>
@@ -1151,7 +1151,7 @@ export function HomePage() {
           >
             <img
               className="object-contain w-full h-full"
-              src="/public/images/stats-section.png"
+              src="/images/stats-section.png"
               alt="icon"
             />
           </div>
@@ -1272,7 +1272,7 @@ export function HomePage() {
               and ensure data security
             </p>
             <img
-              src="/public/images/faq.png"
+              src="/images/faq.png"
               alt="FAQ illustration"
               className="object-contain w-full h-[500px]"
             />
@@ -1302,7 +1302,7 @@ export function HomePage() {
                 <div className="flex flex-row items-center justify-start w-full h-full gap-4">
                   <img
                     className="w-5 h-5"
-                    src="/public/images/check.png"
+                    src="/images/check.png"
                     alt="icon"
                   />
                   <p className="text-white">AI-Powered Process</p>
@@ -1310,7 +1310,7 @@ export function HomePage() {
                 <div className="flex flex-row items-center justify-start w-full h-full gap-4">
                   <img
                     className="w-5 h-5"
-                    src="/public/images/check.png"
+                    src="/images/check.png"
                     alt="icon"
                   />
                   <p className="text-white">Intelligent Virtual </p>
@@ -1318,7 +1318,7 @@ export function HomePage() {
                 <div className="flex flex-row items-center justify-start w-full h-full gap-4">
                   <img
                     className="w-5 h-5"
-                    src="/public/images/check.png"
+                    src="/images/check.png"
                     alt="icon"
                   />
                   <p className="text-white">Custom Machine </p>
@@ -1326,7 +1326,7 @@ export function HomePage() {
                 <div className="flex flex-row items-center justify-start w-full h-full gap-4">
                   <img
                     className="w-5 h-5"
-                    src="/public/images/check.png"
+                    src="/images/check.png"
                     alt="icon"
                   />
                   <p className="text-white">Data-Driven Predictive</p>
@@ -1334,7 +1334,7 @@ export function HomePage() {
                 <div className="flex flex-row items-center justify-start w-full h-full gap-4">
                   <img
                     className="w-5 h-5"
-                    src="/public/images/check.png"
+                    src="/images/check.png"
                     alt="icon"
                   />
                   <p className="text-white">Advanced Natural</p>
@@ -1342,7 +1342,7 @@ export function HomePage() {
                 <div className="flex flex-row items-center justify-start w-full h-full gap-4">
                   <img
                     className="w-5 h-5"
-                    src="/public/images/check.png"
+                    src="/images/check.png"
                     alt="icon"
                   />
                   <p className="text-white">Smart Internet</p>
@@ -1350,7 +1350,7 @@ export function HomePage() {
                 <div className="flex flex-row items-center justify-start w-full h-full gap-4">
                   <img
                     className="w-5 h-5"
-                    src="/public/images/check.png"
+                    src="/images/check.png"
                     alt="icon"
                   />
                   <p className="text-white">Cutting-Edge Vision</p>
@@ -1358,7 +1358,7 @@ export function HomePage() {
                 <div className="flex flex-row items-center justify-start w-full h-full gap-4">
                   <img
                     className="w-5 h-5"
-                    src="/public/images/check.png"
+                    src="/images/check.png"
                     alt="icon"
                   />
                   <p className="text-white">Efficient Robotic</p>

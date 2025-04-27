@@ -3,10 +3,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { useInView } from "react-intersection-observer";
 
-import "swiper/css";
-import "swiper/css/pagination";
+
 import { useState } from "react";
-import "swiper/css/navigation";
+
+import 'swiper/swiper-bundle.css';
 
 export function HomePage() {
   const isAuthenticated = false; // Replace with your authentication logic
@@ -169,14 +169,14 @@ export function HomePage() {
                 <div className="flex gap-4 mt-6">
                   <button className="px-6 py-3 text-white hero-btn">
                     {isAuthenticated ? (
-                      <Link to={`/dashboard/${user?.id}`}>Go to Dashboard</Link>
+                      <Link to={`/dashboard/`}>Go to Dashboard</Link>
                     ) : (
                       <Link to="/login">Join the waitlist</Link>
                     )}
                   </button>
                   <button className="px-6 py-3 text-white bg-transparent border border-white hero-btn-2 btn-transparent-2">
                     {isAuthenticated ? (
-                      <Link to={`/dashboard/${user?.id}`}>Go to Dashboard</Link>
+                      <Link to={`/dashboard/`}>Go to Dashboard</Link>
                     ) : (
                       <Link to="/login">Get Early Access</Link>
                     )}

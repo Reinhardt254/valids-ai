@@ -153,6 +153,7 @@ export function HomePage() {
       console.log(error);
     } finally {
       setIsLoading(false);
+      setPopup(false);
       reset();
     }
   };
@@ -206,9 +207,10 @@ export function HomePage() {
             <SwiperSlide>
               <div className="flex w-full flex-col items-center justify-center gap-2.5 py-8 box-border">
                 <p className="w-1/2 text-lg font-light text-center text-white capitalize max-sm:w-[90%]">
-                  AI that scores, verifies, and prioritizes leads—automatically,
-                  detect duplicates, match roles, and predict engagement. No
-                  more guesswork
+                  ValidLeads.ai offers seamless integrations with CRMs like
+                  HubSpot, Salesforce, and Zoho. You can choose to auto-sync
+                  verified leads in real-time or manually export them in formats
+                  like CSV for flexible use.
                 </p>
 
                 <div className="box-border flex gap-4 mt-6 max-sm:flex-col">
@@ -224,9 +226,9 @@ export function HomePage() {
             <SwiperSlide>
               <div className="flex w-full flex-col items-center justify-center gap-2.5 py-8">
                 <p className="w-1/2 text-lg font-light text-center text-white capitalize max-sm:w-[90%]">
-                  AI that scores, verifies, and prioritizes leads—automatically,
-                  detect duplicates, match roles, and predict engagement. No
-                  more guesswork
+                  We use industry-leading end-to-end encryption, are GDPR and
+                  CCPA compliant, and deploy AI firewalls via Cloudflare to
+                  prevent unauthorized access.
                 </p>
 
                 <div className="flex gap-4 mt-6 max-sm:flex-col">
@@ -244,20 +246,20 @@ export function HomePage() {
       </section>
 
       {/*   ---------------------- Stats Section ---------------------- */}
-      <section className="relative z-30 w-full h-auto mx-0 mb-32 bg-transparent shadow-lg max-sm:mb-0">
+      <section className="relative z-30 flex justify-center w-full h-auto mx-0 mb-48 bg-transparent shadow-lg max-sm:flex-col">
         <img
           src="/images/stats.png"
           alt="Background"
           ref={statGraphRef}
-          className={`relative w-full max-sm:w-[100vw] h-auto px-0 z-index-0 ${
-            hasAnimatedStatGraph ? "up-slid" : ""
+          className={`relative w-full max-sm:w-[100vw] sm:w-[70%] h-auto px-0 z-index-0 ${
+            hasAnimatedStatGraph ? "up-slide" : ""
           }`}
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-7  z-10 py-10  absolute top-[50%] left-0 px-0 w-full justify-items-center box-border h-auto max-sm:relative max-sm:top-0 max-sm:left-0 max-sm:py-0 max-sm:px-0">
           <div
             ref={cardRef}
             className={`flex flex-col w-full h-full gap-4 px-10 py-10 rounded-lg bg-blur  transition-all duration-700 ${
-              hasAnimated ? "animate-card" : " "
+              hasAnimated ? "animate-car" : " "
             }`}
           >
             <img
@@ -279,7 +281,7 @@ export function HomePage() {
             data-aos="fade-in"
             ref={cardRef}
             className={`flex flex-col w-full h-full gap-4 px-10 py-10 rounded-lg bg-blur  transition-all duration-700 ${
-              hasAnimated ? "animate-card" : " "
+              hasAnimated ? "animate-car" : " "
             }`}
           >
             <img
@@ -301,7 +303,7 @@ export function HomePage() {
             data-aos="fade-in"
             ref={cardRef}
             className={`flex flex-col w-full h-full gap-4 px-10 py-10 rounded-lg bg-blur  transition-all duration-700 ${
-              hasAnimated ? "animate-card" : " "
+              hasAnimated ? "animate-car" : " "
             }`}
           >
             <img
@@ -325,7 +327,7 @@ export function HomePage() {
             data-aos="fade-in"
             ref={cardRef}
             className={`flex flex-col w-full h-full gap-4 px-10 py-10 rounded-lg bg-blur  transition-all duration-700 ${
-              hasAnimated ? "animate-card" : " "
+              hasAnimated ? "animate-car" : " "
             }`}
           >
             <img
@@ -593,7 +595,7 @@ export function HomePage() {
               <div className="flex flex-row items-center justify-center w-full h-full gap-2 py-2">
                 <img
                   className="object-contain w-6 h-6"
-                  src="/images/close.png"
+                  src="/images/Close.png"
                   alt="x icon"
                 />
               </div>
@@ -601,7 +603,7 @@ export function HomePage() {
               <div className="flex flex-row items-center justify-center w-full h-full gap-2 bg-[#D9D9D9] py-2">
                 <img
                   className="object-contain w-6 h-6"
-                  src="/images/close.png"
+                  src="/images/Close.png"
                   alt="x icon"
                 />
               </div>
@@ -609,7 +611,7 @@ export function HomePage() {
               <div className="flex flex-row items-center justify-center w-full h-full gap-2 py-2">
                 <img
                   className="object-contain w-6 h-6"
-                  src="/images/close.png"
+                  src="/images/Close.png"
                   alt="x icon"
                 />
               </div>
@@ -617,7 +619,7 @@ export function HomePage() {
               <div className="flex flex-row items-center justify-center w-full h-full gap-2 bg-[#D9D9D9] py-2">
                 <img
                   className="object-contain w-6 h-6"
-                  src="/images/close.png"
+                  src="/images/Close.png"
                   alt="x icon"
                 />
               </div>
@@ -625,7 +627,7 @@ export function HomePage() {
               <div className="flex flex-row items-center justify-center w-full h-full gap-2 py-2">
                 <img
                   className="object-contain w-6 h-6"
-                  src="/images/close.png"
+                  src="/images/Close.png"
                   alt="x icon"
                 />
               </div>
@@ -659,7 +661,7 @@ export function HomePage() {
               </p>
               <div className="flex flex-row items-center justify-end w-full h-full gap-4 mb-10">
                 <img
-                  className="object-contain w-full h-full transition-all duration-300 hover:scale-110"
+                  className="object-contain w-full h-full transition-all duration-300 hover:scale-100"
                   src="/images/power.png"
                   alt="icon"
                 />
@@ -848,7 +850,7 @@ export function HomePage() {
                 <img
                   src="/images/upload.png"
                   alt="icon"
-                  className="absolute top-[-50px] w-32 h-32 right-[-50px] max-sm:w-16 max-sm:h-16 max-sm:top-[-20px] max-sm:right-[-20px]"
+                  className="absolute top-[-50px] w-40 h-40 right-[-50px] max-sm:w-16 max-sm:h-16 max-sm:top-[-20px] max-sm:right-[-20px]"
                 />
               </div>
             </div>
@@ -876,7 +878,7 @@ export function HomePage() {
                 <img
                   src="/images/upload.png"
                   alt="icon"
-                  className="absolute top-[-50px] w-32 h-32 right-[-50px] max-sm:w-16 max-sm:h-16 max-sm:top-[-20px] max-sm:right-[-20px]"
+                  className="absolute top-[-50px] w-40 h-40 right-[-50px] max-sm:w-16 max-sm:h-16 max-sm:top-[-20px] max-sm:right-[-20px]"
                 />
               </div>
             </div>
@@ -904,7 +906,7 @@ export function HomePage() {
                 <img
                   src="/images/upload.png"
                   alt="icon"
-                  className="absolute top-[-50px] w-32 h-32 right-[-50px] max-sm:w-16 max-sm:h-16 max-sm:top-[-20px] max-sm:right-[-20px]"
+                  className="absolute top-[-50px] w-40 h-40 right-[-50px] max-sm:w-16 max-sm:h-16 max-sm:top-[-20px] max-sm:right-[-20px]"
                 />
               </div>
             </div>
@@ -1030,9 +1032,7 @@ export function HomePage() {
         >
           <div
             ref={securityRef}
-            className={`flex flex-col items-center justify-center h-full gap-0 w-[40%] max-sm:w-full ${
-              hasAnimatedsecurity ? "left-slide" : ""
-            }`}
+            className={`flex flex-col items-center justify-center h-full gap-0 w-[40%] max-sm:w-full`}
           >
             <div className="flex flex-col items-center justify-center w-full h-full gap-0">
               <img
@@ -1044,9 +1044,7 @@ export function HomePage() {
           </div>
           <div
             ref={securityRef}
-            className={`flex flex-col items-center justify-center h-full gap-0 w-[60%] max-sm:w-full ${
-              hasAnimatedsecurity ? "right-slide" : ""
-            }`}
+            className={`flex flex-col items-center justify-center h-full gap-0 w-[60%] max-sm:w-full`}
           >
             <div className="flex flex-col items-start justify-center w-full h-full gap-5">
               <h2 className="text-5xl font-semibold text-white max-sm:text-3xl text-start">
@@ -1137,10 +1135,7 @@ export function HomePage() {
                             Threat <br /> Detection <br /> Accuracy
                           </h2>
                           <div className="flex flex-row items-center justify-end w-full h-full gap-4 mb-0">
-                            <img
-                              src="/images/power-arrow.png"
-                              alt="icon"
-                            />
+                            <img src="/images/power-arrow.png" alt="icon" />
                           </div>
                         </div>
                       </div>
@@ -1194,10 +1189,7 @@ export function HomePage() {
                             Threat <br /> Detection <br /> Accuracy
                           </h2>
                           <div className="flex flex-row items-center justify-end w-full h-full gap-4 mb-0">
-                            <img
-                              src="/images/power-arrow.png"
-                              alt="icon"
-                            />
+                            <img src="/images/power-arrow.png" alt="icon" />
                           </div>
                         </div>
                       </div>
@@ -1428,7 +1420,7 @@ export function HomePage() {
             <img
               src="/images/faq.png"
               alt="FAQ illustration"
-              className="object-contain w-full h-[400px] max-sm:h-[300px]"
+              className="object-contain w-full h-[400px] max-sm:h-[300px] bg-[#000]"
             />
           </div>
         </div>
@@ -1437,9 +1429,7 @@ export function HomePage() {
       {/*   ---------------------- Transforming Vision into Reality Section ---------------------- */}
       <section
         ref={possibilitiesRef}
-        className={`flex flex-col items-center justify-center w-full h-full gap-10 py-10 max-sm:pt-8 ${
-          hasTransFormed ? "up-slide" : ""
-        }`}
+        className={`flex flex-col items-center justify-center w-full h-full gap-10 py-10 max-sm:pt-8`}
       >
         <div className="flex flex-row items-start justify-start w-full h-full gap-10 max-sm:flex-col">
           <div className="w-[50%] h-full flex flex-col items-start justify-start gap-5 max-sm:w-full">
@@ -1454,67 +1444,35 @@ export function HomePage() {
             <div className="flex flex-col items-start justify-start w-full h-full gap-5">
               <div className="grid grid-cols-2 gap-5 ">
                 <div className="flex flex-row items-center justify-start w-full h-full gap-4">
-                  <img
-                    className="w-5 h-5"
-                    src="/images/check.png"
-                    alt="icon"
-                  />
+                  <img className="w-5 h-5" src="/images/check.png" alt="icon" />
                   <p className="text-white">AI-Powered Process</p>
                 </div>
                 <div className="flex flex-row items-center justify-start w-full h-full gap-4">
-                  <img
-                    className="w-5 h-5"
-                    src="/images/check.png"
-                    alt="icon"
-                  />
+                  <img className="w-5 h-5" src="/images/check.png" alt="icon" />
                   <p className="text-white">Intelligent Virtual </p>
                 </div>
                 <div className="flex flex-row items-center justify-start w-full h-full gap-4">
-                  <img
-                    className="w-5 h-5"
-                    src="/images/check.png"
-                    alt="icon"
-                  />
+                  <img className="w-5 h-5" src="/images/check.png" alt="icon" />
                   <p className="text-white">Custom Machine </p>
                 </div>
                 <div className="flex flex-row items-center justify-start w-full h-full gap-4">
-                  <img
-                    className="w-5 h-5"
-                    src="/images/check.png"
-                    alt="icon"
-                  />
+                  <img className="w-5 h-5" src="/images/check.png" alt="icon" />
                   <p className="text-white">Data-Driven Predictive</p>
                 </div>
                 <div className="flex flex-row items-center justify-start w-full h-full gap-4">
-                  <img
-                    className="w-5 h-5"
-                    src="/images/check.png"
-                    alt="icon"
-                  />
+                  <img className="w-5 h-5" src="/images/check.png" alt="icon" />
                   <p className="text-white">Advanced Natural</p>
                 </div>
                 <div className="flex flex-row items-center justify-start w-full h-full gap-4">
-                  <img
-                    className="w-5 h-5"
-                    src="/images/check.png"
-                    alt="icon"
-                  />
+                  <img className="w-5 h-5" src="/images/check.png" alt="icon" />
                   <p className="text-white">Smart Internet</p>
                 </div>
                 <div className="flex flex-row items-center justify-start w-full h-full gap-4">
-                  <img
-                    className="w-5 h-5"
-                    src="/images/check.png"
-                    alt="icon"
-                  />
+                  <img className="w-5 h-5" src="/images/check.png" alt="icon" />
                   <p className="text-white">Cutting-Edge Vision</p>
                 </div>
                 <div className="flex flex-row items-center justify-start w-full h-full gap-4">
-                  <img
-                    className="w-5 h-5"
-                    src="/images/check.png"
-                    alt="icon"
-                  />
+                  <img className="w-5 h-5" src="/images/check.png" alt="icon" />
                   <p className="text-white">Efficient Robotic</p>
                 </div>
               </div>
@@ -1522,9 +1480,7 @@ export function HomePage() {
           </div>
           <div
             ref={possibilitiesRef}
-            className={`w-[50%] h-auto flex flex-col items-start justify-start gap-5 max-sm:w-full ${
-              hasTransFormed ? "left-slide" : ""
-            }`}
+            className={`w-[50%] h-auto flex flex-col items-start justify-start gap-5 max-sm:w-full`}
           >
             <div className="flex flex-col items-start justify-start w-full h-full gap-5 bg-[#131313] rounded-md px-16 py-10 max-sm:px-4 max-sm:py-4">
               <h2 className="text-2xl font-bold text-white">Contact Us</h2>
@@ -1625,7 +1581,7 @@ export function HomePage() {
 
       {videoPopup && (
         <div className="fixed top-0 bottom-0 left-0 right-0 flex items-center justify-center h-screen bg-[#00000071] bg-opacity-50 z-10000">
-          <div className="w-[50%] h-[80%] relative p-10 bg-white box-border rounded-md max-sm:w-[90%] max-sm:h-[auto] max-sm:px-1 max-sm:py-16">
+          <div className="w-[50%] h-auto relative p-16 bg-white box-border rounded-md max-sm:w-[90%] max-sm:h-[auto] max-sm:px-1 max-sm:py-16">
             <div className="absolute right-3 top-3">
               <XIcon
                 className="w-10 h-10 p-1 text-red-600 cursor-pointer"
@@ -1634,8 +1590,11 @@ export function HomePage() {
             </div>
             <video
               className="w-full h-full"
-              src="https://validleads.ai/wp-content/uploads/2025/03/IMG_9806.mp4"
+              src="https://validleads.nyc3.digitaloceanspaces.com/videos/video-1746012152139-949519242-IMG_9806.MP4"
               controls
+              autoPlay
+              playsInline
+              preload="auto"
             />
           </div>
         </div>

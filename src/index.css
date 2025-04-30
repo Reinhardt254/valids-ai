@@ -508,8 +508,8 @@ body {
   .ai-pagination.swiper-pagination .swiper-pagination-bullet {
     background-color: #ffffff !important;
     color: #ffffff !important;
-    width: 1200px !important;
-    height: 1200px !important;
+    width: 12px !important;
+    height: 12px !important;
     position: relative !important;
     z-index: 3000 !important;
     display: flex !important;

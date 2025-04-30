@@ -1096,7 +1096,7 @@ export function HomePage() {
 
       {/*   ---------------------- AI That Understands Leads Like Humans Do — Only Faster Section ---------------------- */}
       <section className="flex flex-col items-center justify-center w-full h-full gap-20 py-0 max-sm:px-4 max-sm:py-4">
-        <div className="flex flex-col items-center justify-center w-full h-full gap-5 py-10 max-sm:pt-0">
+        <div className="flex flex-col items-center justify-center w-full h-full gap-5 py-10 max-sm:pt-0 max-sm:pb-5">
           <div className="flex flex-row items-center justify-center w-full h-full gap-10 py-10 pb-5 max-sm:flex-col max-sm:gap-5">
             <h2 className="text-4xl max-sm:text-2xl font-semibold text-white sm:w-[40%] w-[100%]">
               AI That Understands Leads Like Humans Do — Only Faster
@@ -1116,7 +1116,7 @@ export function HomePage() {
               />
             </div>
 
-            <div className="w-[60%] h-full relative max-sm:w-full max-sm:h-auto flex justify-center items-center sm:pl-8 box-border max-sm:pb-0">
+            <div className="w-[60%] h-full relative max-sm:w-full max-sm:h-auto flex justify-center items-center sm:pl-8 box-border max-sm:pb-20">
               <div className="ai-swiper-button-prev swiper-button-prev"></div>
               <div className="ai-swiper-button-next swiper-button-next"></div>
               <div className="swiper-pagination ai-pagination"></div>
@@ -1126,7 +1126,7 @@ export function HomePage() {
                 loop={true}
                 spaceBetween={10}
                 autoplay={{
-                  delay: 5000,
+                  delay: 10000,
                   disableOnInteraction: false,
                 }}
                 navigation={{

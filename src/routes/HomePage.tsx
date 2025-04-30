@@ -253,7 +253,7 @@ export function HomePage() {
             hasAnimatedStatGraph ? "up-slid" : ""
           }`}
         />
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-7  z-10 py-10  absolute top-[50%] left-0 px-0 w-full justify-items-center max-sm:px-4 box-border h-auto max-sm:relative max-sm:top-0 max-sm:left-0 max-sm:py-0 max-sm:px-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-7  z-10 py-10  absolute top-[50%] left-0 px-0 w-full justify-items-center box-border h-auto max-sm:relative max-sm:top-0 max-sm:left-0 max-sm:py-0 max-sm:px-0">
           <div
             ref={cardRef}
             className={`flex flex-col w-full h-full gap-4 px-10 py-10 rounded-lg bg-blur  transition-all duration-700 ${
@@ -741,7 +741,7 @@ export function HomePage() {
                   CRM & Ad <br /> Platform <br /> Integrations
                 </h2>
                 <div className="flex flex-row items-center justify-end w-full h-full gap-4 mb-0">
-                  <img class src="/public/images/power-arrow.png" alt="icon" />
+                  <img src="/public/images/power-arrow.png" alt="icon" />
                 </div>
                 <div className="absolute bottom-[110%] right-0  h-full bg-[#131313] max-w-[90vw] w-[500px] flex flex-col items-center justify-center rounded-lg shadow-[#646cff] shadow-sm power-popup4">
                   <p className="box-border p-5 text-white">

@@ -262,7 +262,7 @@ export function HomePage() {
           >
             <img
               className="w-15 h-15"
-              src="/images/icon.png"
+              src="/images/Icon.png"
               alt="Lead Intelligence"
             />
             <h3 className="text-xl font-bold text-white">Lead Intelligence</h3>
@@ -284,7 +284,7 @@ export function HomePage() {
           >
             <img
               className="w-15 h-15"
-              src="/images/icon (1).png"
+              src="/images/Icon (1).png"
               alt="Focus on what converts"
             />
             <h3 className="text-xl font-bold text-white">Smart Targeting</h3>
@@ -306,7 +306,7 @@ export function HomePage() {
           >
             <img
               className="w-15 h-15"
-              src="/images/icon (2).png"
+              src="/images/Icon (2).png"
               alt="Focus on what converts"
             />
             <h3 className="text-xl font-bold text-white">
@@ -330,7 +330,7 @@ export function HomePage() {
           >
             <img
               className="w-15 h-15"
-              src="/images/icon (3).png"
+              src="/images/Icon (3).png"
               alt="Instant Verification"
             />
             <h3 className="text-xl font-bold text-white">

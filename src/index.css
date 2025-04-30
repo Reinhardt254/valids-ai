@@ -48,6 +48,25 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  width: 100vw !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  background-color: #030303 !important;
+}
+
+#root{
+  width: 100% !important;
+    max-width: 100vw !important;
+    display: flex;
+    flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #030303 !important;
 }
 
 body {
@@ -56,14 +75,19 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 120vh;
-  width: 100%;
-  overflow-x: hidden;
 
-  background-color: #030303;
+  overflow-x: hidden !important;
+  width: 100% !important;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #030303 !important;
 
   font-family: 'Montserrat', sans-serif !important;
 }
-
+ 
 .hero-video::before{
   content: "";
   width: 100%;
@@ -73,7 +97,7 @@ body {
   left: 0;
   z-index: 50;
   background-color: #030303;
-  background: linear-gradient(to bottom, #030303, #030303, #03030396, #fcfcfc00);
+  background: linear-gradient(to bottom, #03030300, #030303, #03030396, #fcfcfc00);
   opacity: 0.8;
   box-shadow: 0 -10px 50px 20px rgba(0, 0, 0, 0.8) inset;
 }
@@ -90,7 +114,7 @@ body {
 }
 
 .animate-card {
-  animation: bg-blur-card 1s ease forwards;
+  animation: bg-blur-card 1.5s ease forwards;
 }
 
 .animate-text{
@@ -118,12 +142,17 @@ body {
   animation: left-slide 1.5s ease forwards;
 }
 
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+
 .right-slide{
   animation: right-slide 1.5s ease forwards;
 }
 
 .up-slide{
-  animation: up-slide 1.5s ease forwards;
+  animation: up-slide 1.5s ease forwards !important;
 }
 
 @keyframes up-slide{
@@ -163,10 +192,10 @@ body {
 
 @keyframes bg-blur-card{
   0%{
-    transform: scale(0.7) translateY(20%);
+    transform: scale(0.7);
   }
   100%{
-    transform: scale(1) translateY(0);
+    transform: scale(1);
   }
 }
 
@@ -207,6 +236,7 @@ body {
   display: flex !important;
   flex-direction: row !important;
   gap: 20px !important;
+  height: auto !important;
 }
 
 .real-card-green{
@@ -330,6 +360,12 @@ border-radius: 41px;
   margin: 2rem 0;
 }
 
+@media (max-width: 768px) {
+  .separator{
+    margin: 0.5rem 0;
+  }
+}
+
 .swiper-button-next,
 .swiper-button-prev {
   color: #fff;
@@ -364,14 +400,31 @@ border-radius: 41px;
 }
 
 .ai-swiper-button-prev{
-  right: 120px !important;
+  right: 100px !important;
   left: auto !important;
-  top: 50px;
+  top: 50px !important;
+
+  width: 50px !important;
+  height: 50px !important;
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
 }
 
 .ai-swiper-button-next{
-  right: 50px;
-  top: 50px;
+  right: 50px !important;
+  top: 50px !important;
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width:768px){
+  .ai-swiper-button-next, .ai-swiper-button-prev{
+    display: none !important;
+  }
 }
 
 @keyframes button-anime-border {
@@ -500,3 +553,52 @@ button:focus-visible {
     @apply bg-background text-foreground;
   }
 }
+
+@media (max-width: 768px) {
+  .heronav{
+    display: none !important;
+  }
+}
+
+
+/* ------------------------------ Power Features Built for Serious B2B Growth Section ------------------------------ */
+
+.power-1, .power-2, .power-3, .power-4, .power-5, .power-6{
+  position: relative;
+}
+
+.power-1 .power-popup1,
+.power-2 .power-popup2,
+.power-3 .power-popup3,
+.power-4 .power-popup4,
+.power-5 .power-popup5,
+.power-6 .power-popup6{
+  display: none;
+}
+
+.power-1:hover .power-popup1{
+  display: flex;
+}
+
+.power-2:hover .power-popup2{
+  display: flex;
+}
+
+.power-3:hover .power-popup3{
+  display: flex;
+}
+
+.power-4:hover .power-popup4{
+  display: flex;
+}
+
+.power-5:hover .power-popup5{
+  display: flex;
+}
+
+.power-6:hover .power-popup6{
+  display: flex;
+}
+
+/* ------------------------------ Power Features Built for Serious B2B Growth Section ------------------------------ */
+

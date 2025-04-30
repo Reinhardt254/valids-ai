@@ -1,5 +1,5 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
-import { ShoppingCartIcon, MenuIcon, XIcon } from "lucide-react";
+import {  MenuIcon, XIcon } from "lucide-react";
 import { FooterLayout } from "./footerLayout";
 import { useState } from "react";
  

@@ -246,7 +246,7 @@ export function HomePage() {
       </section>
 
       {/*   ---------------------- Stats Section ---------------------- */}
-      <section className="relative z-30 flex justify-center w-full h-auto mx-0 mb-48 bg-transparent shadow-lg max-sm:flex-col">
+      <section className="relative z-30 flex justify-center w-full h-auto mx-0 mb-48 bg-transparent shadow-lg max-sm:flex-col max-sm:mb-0">
         <img
           src="/images/stats.png"
           alt="Background"
@@ -355,13 +355,13 @@ export function HomePage() {
           <h3 className="text-5xl font-light text-white max-sm:text-3xl">
             Real Problems. Real Solutions. Powered by AI
           </h3>
-          <p className="text-xl text-white max-sm:text-sm">
+          <p className="text-xl text-white max-sm:text-[1rem]">
             Discover how ValidLeads.ai eliminates the biggest lead generation
             headaches — automatically.
           </p>
         </div>
 
-        <div className="box-border relative w-full h-full max-sm:px-4 max-sm:py-4 max-sm:mb-5">
+        <div className="box-border relative w-full h-full max-sm:px-4 max-sm:py-4 max-sm:mb-5 max-sm:pb-10">
           <div className="absolute left-0 z-10 transform -translate-y-1/2 bot-swiper-button-prev swiper-button-prev top-1/2"></div>
 
           <div
@@ -387,6 +387,8 @@ export function HomePage() {
             />
           </div>
 
+          <div className="swiper-pagination real-pagination "></div>
+
           <Swiper
             slidesPerView={1}
             loop={true}
@@ -398,6 +400,10 @@ export function HomePage() {
             navigation={{
               prevEl: ".bot-swiper-button-prev",
               nextEl: ".bot-swiper-button-next",
+            }}
+            pagination={{
+              el: ".real-pagination",
+              clickable: true,
             }}
             breakpoints={{
               768: {
@@ -641,7 +647,7 @@ export function HomePage() {
         <div className="box-border flex flex-col items-start justify-center w-full h-full gap-5 mb-0 max-sm:px-4">
           <h2
             ref={powerTextRef}
-            className={`w-1/2 max-sm:w-full text-5xl font-bold text-white ${
+            className={`w-1/2 max-sm:w-full text-5xl max-sm:text-3xl font-bold text-white ${
               hasAnimatedPowerHeader ? "power-header" : ""
             }`}
           >
@@ -800,12 +806,12 @@ export function HomePage() {
             </div>
           </div>
 
-          <div className="flex flex-col items-end justify-end w-full h-full gap-4 max-sm:w-full">
+          <div className="flex flex-col items-end justify-end w-full h-full gap-4 max-sm:w-full max-sm:pt-10">
             <div className="flex flex-col items-end justify-center w-[60%] h-full gap-4 max-sm:w-full">
-              <h2 className="text-4xl font-semibold text-right text-white">
+              <h2 className="text-4xl font-semibold text-right text-white max-sm:text-start max-sm:text-3xl">
                 From Raw Data to <br /> Revenue - In 3 easy Steps
               </h2>
-              <p className="text-right text-white">
+              <p className="text-right text-white max-sm:text-start">
                 Our AI agents take your messy, unverified leads and turn them
                 into clean, scored, and sales-ready opportunities —
                 automatically.
@@ -816,7 +822,10 @@ export function HomePage() {
       </section>
 
       {/*   ---------------------- Lead Generation Process Section ---------------------- */}
-      <section className="w-full h-full max-sm:px-0">
+      <section className="relative w-full h-full max-sm:pb-12 max-sm:px-0">
+        <div className="swiper-button-prev sync-btn"></div>
+        <div className="swiper-button-next sync-btn"></div> 
+        <div className="pagination sync-pagination swiper-pagination"></div>
         <Swiper
           slidesPerView={1}
           loop={true}
@@ -825,14 +834,25 @@ export function HomePage() {
             delay: 5000,
             disableOnInteraction: false,
           }}
-          navigation={true}
+          navigation={
+            {
+              nextEl: ".swiper-button-next.sync-btn",
+              prevEl: ".swiper-button-prev.sync-btn",
+            }
+          }
+          pagination={
+            {
+              el: ".sync-pagination",
+              clickable: true,
+            }
+          }
           modules={[Autoplay, Pagination, Navigation]}
-          className="w-full"
+          className="relative w-full"
         >
-          <SwiperSlide className="flex flex-col items-center justify-center w-[100%] h-full gap-4 py-32 mt-10 max-sm:py-4">
+          <SwiperSlide className="flex flex-col items-center justify-center w-[100%] h-full gap-4 py-32 mt-10 max-sm:mt-0 max-sm:py-10">
             <div className="flex flex-col items-center justify-center w-full h-[350px] max-sm:h-[380px] gap-4">
               <div className="relative flex flex-col items-start justify-start w-1/2 h-full gap-4 p-10 border-2 border-white rounded-lg max-sm:w-[90%] max-sm:p-4 max-sm:h-[350px]">
-                <h2 className="text-4xl font-semibold text-white max-sm:text-2xl">
+                <h2 className="text-4xl font-semibold text-white max-sm:text-2xl max-sm:w-[70%]">
                   Upload or Sync Your <br /> Leads
                 </h2>
                 <p className="text-lg text-white uppercase max-sm:text-sm">
@@ -850,16 +870,16 @@ export function HomePage() {
                 <img
                   src="/images/upload.png"
                   alt="icon"
-                  className="absolute top-[-50px] w-40 h-40 right-[-50px] max-sm:w-16 max-sm:h-16 max-sm:top-[-20px] max-sm:right-[-20px]"
+                  className="absolute top-[-50px] w-40 h-40 right-[-50px] max-sm:w-20 max-sm:h-20 max-sm:top-[-20px] max-sm:right-[-20px]"
                 />
               </div>
             </div>
           </SwiperSlide>
 
-          <SwiperSlide className="flex flex-col items-center justify-center w-[100%] h-full gap-4 py-32 mt-10 max-sm:py-4">
+          <SwiperSlide className="flex flex-col items-center justify-center w-[100%] h-full gap-4 py-32 mt-10 max-sm:mt-0 max-sm:py-10">
             <div className="flex flex-col items-center justify-center w-full h-[350px] gap-4 max-sm:h-[380px]">
-              <div className="relative flex flex-col items-start justify-start w-1/2 h-full gap-4 p-10 border-2 border-white rounded-lg max-sm:w-[90%] max-sm:p-4">
-                <h2 className="text-4xl font-semibold text-white max-sm:text-2xl">
+              <div className="relative flex flex-col items-start justify-start w-1/2 h-full gap-4 p-10 border-2 border-white rounded-lg max-sm:w-[90%] max-sm:p-4 ">
+                <h2 className="text-4xl font-semibold text-white max-sm:text-2xl max-sm:w-[70%]">
                   AI Validates, Scores & <br /> Filters
                 </h2>
                 <p className="text-lg text-white uppercase max-sm:text-sm">
@@ -878,16 +898,16 @@ export function HomePage() {
                 <img
                   src="/images/upload.png"
                   alt="icon"
-                  className="absolute top-[-50px] w-40 h-40 right-[-50px] max-sm:w-16 max-sm:h-16 max-sm:top-[-20px] max-sm:right-[-20px]"
+                  className="absolute top-[-50px] w-40 h-40 right-[-50px] max-sm:w-20 max-sm:h-20 max-sm:top-[-20px] max-sm:right-[-20px]"
                 />
               </div>
             </div>
           </SwiperSlide>
 
-          <SwiperSlide className="flex flex-col items-center justify-center w-[100%] h-full gap-4 py-32 mt-10 max-sm:py-4">
+          <SwiperSlide className="flex flex-col items-center justify-center w-[100%] h-full gap-4 py-32 mt-10 max-sm:mt-0 max-sm:py-10">
             <div className="flex flex-col items-center justify-center w-full h-[350px] gap-4 max-sm:h-[380px]">
               <div className="relative flex flex-col items-start justify-start w-1/2 h-full gap-4 p-10 border-2 border-white rounded-lg max-sm:w-[90%] max-sm:p-4">
-                <h2 className="text-4xl font-semibold text-white max-sm:text-2xl">
+                <h2 className="text-4xl font-semibold text-white max-sm:text-2xl max-sm:w-[70%]">
                   Sync to CRM & Trigger Auto <br /> Outreach
                 </h2>
                 <p className="text-lg text-white uppercase max-sm:text-sm">
@@ -906,7 +926,7 @@ export function HomePage() {
                 <img
                   src="/images/upload.png"
                   alt="icon"
-                  className="absolute top-[-50px] w-40 h-40 right-[-50px] max-sm:w-16 max-sm:h-16 max-sm:top-[-20px] max-sm:right-[-20px]"
+                  className="absolute top-[-50px] w-40 h-40 right-[-50px] max-sm:w-20 max-sm:h-20 max-sm:top-[-20px] max-sm:right-[-20px]"
                 />
               </div>
             </div>
@@ -915,7 +935,7 @@ export function HomePage() {
       </section>
 
       {/*   ---------------------- Powered by Section ---------------------- */}
-      <section className="w-full h-full max-sm:px-4 max-sm:py-4">
+      <section className="w-full h-full max-sm:px-4 max-sm:py-4 max-sm:pt-12">
         <div className="flex flex-col items-center justify-center w-full h-full gap-0">
           <h2 className="text-2xl font-semibold text-white">POWERED BY</h2>
           <Swiper
@@ -1025,7 +1045,7 @@ export function HomePage() {
       </section>
 
       {/*---------------------- Security You Can Count On Section ---------------------- */}
-      <section className="flex flex-col items-center justify-center w-full h-full gap-10 py-10 max-sm:px-4 max-sm:py-4">
+      <section className="flex flex-col items-center justify-center w-full h-full gap-10 py-10 max-sm:px-4 max-sm:py-4 max-sm:pb-0">
         <div
           ref={securityRef}
           className="flex flex-row w-full gap-10 h-[400px] max-sm:h-auto max-sm:flex-col-reverse"
@@ -1042,6 +1062,7 @@ export function HomePage() {
               />
             </div>
           </div>
+          
           <div
             ref={securityRef}
             className={`flex flex-col items-center justify-center h-full gap-0 w-[60%] max-sm:w-full`}
@@ -1075,7 +1096,7 @@ export function HomePage() {
 
       {/*   ---------------------- AI That Understands Leads Like Humans Do — Only Faster Section ---------------------- */}
       <section className="flex flex-col items-center justify-center w-full h-full gap-20 py-0 max-sm:px-4 max-sm:py-4">
-        <div className="flex flex-col items-center justify-center w-full h-full gap-5 py-10">
+        <div className="flex flex-col items-center justify-center w-full h-full gap-5 py-10 max-sm:pt-0">
           <div className="flex flex-row items-center justify-center w-full h-full gap-10 py-10 pb-5 max-sm:flex-col max-sm:gap-5">
             <h2 className="text-4xl max-sm:text-2xl font-semibold text-white sm:w-[40%] w-[100%]">
               AI That Understands Leads Like Humans Do — Only Faster
@@ -1095,9 +1116,10 @@ export function HomePage() {
               />
             </div>
 
-            <div className="w-[60%] h-full relative max-sm:w-full max-sm:h-auto flex justify-center items-center sm:pl-8 box-border">
+            <div className="w-[60%] h-full relative max-sm:w-full max-sm:h-auto flex justify-center items-center sm:pl-8 box-border max-sm:pb-0">
               <div className="ai-swiper-button-prev swiper-button-prev"></div>
               <div className="ai-swiper-button-next swiper-button-next"></div>
+              <div className="swiper-pagination ai-pagination"></div>
 
               <Swiper
                 slidesPerView={1}
@@ -1111,8 +1133,12 @@ export function HomePage() {
                   nextEl: ".ai-swiper-button-next",
                   prevEl: ".ai-swiper-button-prev",
                 }}
+                pagination={{
+                  el: ".ai-pagination",
+                  clickable: true,
+                }}
                 modules={[Autoplay, Pagination, Navigation]}
-                className="left-0 w-full h-full "
+                className="relative left-0 w-full h-full"
               >
                 <SwiperSlide className="left-0 w-full h-full ">
                   <div className="relative flex flex-col items-center justify-center w-full gap-10">
@@ -1125,7 +1151,7 @@ export function HomePage() {
                         Predictive insights based on user behavior
                       </p>
 
-                      <div className="flex flex-row items-center justify-center w-full h-full gap-10"></div>
+                      <div className="flex flex-row items-center justify-center w-full h-full gap-10 max-sm:hidden"></div>
                     </div>
 
                     <div className="flex flex-row items-center justify-center w-full h-full gap-10 max-sm:flex-col">
@@ -1179,7 +1205,7 @@ export function HomePage() {
                         Predictive insights based on user behavior
                       </p>
 
-                      <div className="flex flex-row items-center justify-center w-full h-full gap-10"></div>
+                      <div className="flex flex-row items-center justify-center w-full h-full gap-10 max-sm:hidden"></div>
                     </div>
 
                     <div className="flex flex-row items-center justify-center w-full h-full gap-10 max-sm:flex-col">
@@ -1236,18 +1262,18 @@ export function HomePage() {
               hasAnimatedredifining ? "right-slide" : ""
             }`}
           >
-            <h2 className="mb-0 text-4xl font-semibold text-white">
+            <h2 className="mb-0 text-4xl font-semibold text-white max-sm:text-center">
               Redefining Possibilities <br />
               Through AI
             </h2>
 
-            <div className="flex flex-col items-start justify-start gap-4">
-              <p className="text-white">
+            <div className="flex flex-col items-start justify-start gap-4 max-sm:w-full max-sm:justify-center max-sm:items-center">
+              <p className="text-white max-sm:text-center">
                 Unlock a new era of innovation with Valid Leads, where
                 artificial intelligence transforms limitations into
                 opportunities. Redefine what's possible through.
               </p>
-              <div className="flex flex-row items-center justify-center gap-4 pt-4">
+              <div className="flex flex-row items-center justify-center gap-4 pt-4 max-sm:flex-col">
                 <button
                   onClick={() => setVideoPopup(true)}
                   className="text-white hero-btn max-sm:text-xsm"
@@ -1264,15 +1290,15 @@ export function HomePage() {
               </div>
             </div>
 
-            <div className="flex flex-col items-center justify-center gap-4">
-              <div className="flex flex-row items-center justify-center gap-4">
-                <div className="flex flex-col items-center justify-center gap-4">
+            <div className="box-border flex flex-col items-center justify-center gap-4">
+              <div className="box-border flex flex-row items-center justify-center gap-4">
+                <div className="flex flex-col items-center justify-center gap-4 max-sm:w-full">
                   <p className="text-2xl font-bold text-white">85%</p>
-                  <h4 className="text-white">Satisfaction Ratio</h4>
+                  <h4 className="text-white max-sm:text-sm max-sm:text-center ">Satisfaction Ratio</h4>
                 </div>
-                <div className="flex flex-col items-center justify-center gap-4">
+                <div className="flex flex-col items-center justify-center gap-4 max-sm:w-full">
                   <p className="text-2xl font-bold text-white">70%</p>
-                  <h4 className="text-white">Cost Savings</h4>
+                  <h4 className="text-white max-sm:text-sm max-sm:text-center">Cost Savings</h4>
                 </div>
               </div>
 
@@ -1610,7 +1636,7 @@ export function HomePage() {
             className="flex flex-col items-start justify-start w-[500px] h-[500px] gap-5 bg-[#131313] rounded-md px-16 py-10"
             onClick={(e) => e.stopPropagation()}
           >
-            <h2 className="w-full mb-2 text-3xl font-bold text-center text-white">
+            <h2 className="w-full mb-2 text-3xl font-bold text-center text-white max-sm:text-2xl">
               JOIN THE WAITLIST
             </h2>
 

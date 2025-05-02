@@ -60,23 +60,23 @@ export function RootLayout() {
 
   const MainNavbar = () => (
     <div className="box-border z-10 w-full px-10 mt-5 bg-black border-gray-800 border-opacity-10 border-t-1 border-b-1 max-w-screen max-sm:px-5">
-      <div className="box-border px-0 mx-auto sm:px-6 lg:px-12 sma:min-w-auto">
-        <div className="flex justify-between w-full h-20">
-          <div className="flex items-center justify-center">
+      <div className="box-border px-0 mx-0 sm:px-6 lg:px-12 sm:min-w-auto max-lg:px-5">
+        <div className="flex justify-between w-full h-20 gap-10">
+          <div className="flex items-center justify-center w-auto">
             <div className="flex items-center flex-shrink-0 w-auto">
               <Link to="/" className="text-xl font-bold text-indigo-600">
                 <img
                   src={logo}
                   alt="logo"
-                  className="object-contain w-auto h-full max-sm:w-1/2"
+                  className="object-contain w-auto h-full max-sm:w-1/2 "
                 />
               </Link>
             </div>
           </div>
 
-          <div className="box-border hidden sm:ml-6 sm:flex sm:space-x-8">
-            <Link
-              to="#"
+          <div className="box-border hidden sm:ml-0 xl:flex sm:space-x-8 max-xl:hidden">
+              <Link
+                to="#"
               className="inline-flex items-center px-1 pt-1 text-sm font-medium text-white border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700"
             >
               Marketplace
@@ -111,7 +111,7 @@ export function RootLayout() {
             </Link>
           </div>
 
-          <div className="box-border hidden sm:ml-6 sm:flex sm:items-center">
+          <div className="box-border hidden w-auto sm:ml-6 sm:flex sm:items-center">
             {/* <Link
               to="/cart"
               className="inline-flex items-center px-1 pt-1 mr-4 text-sm font-medium text-gray-500 border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700"
@@ -153,7 +153,7 @@ export function RootLayout() {
             )}
           </div>
 
-          <div className="box-border flex items-center space-x-4 sm:hidden">
+          <div className="box-border flex items-center space-x-4 xl:hidden">
             <MenuIcon  onClick={() => setToggle(!toggle)} className="w-10 h-10 text-xl text-white" /> 
           </div>
 

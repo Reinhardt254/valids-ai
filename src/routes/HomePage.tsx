@@ -248,7 +248,7 @@ export function HomePage() {
       </section>
 
       {/*   ---------------------- Stats Section ---------------------- */}
-      <section className="relative z-30 flex justify-center w-full h-auto mx-0 mb-48 bg-transparent shadow-lg max-sm:flex-col max-sm:mb-0">
+      <section className="relative z-30 flex justify-center w-full h-auto mx-0 mb-48 bg-transparent shadow-lg max-sm:flex-col max-sm:mb-0 md:mb-[40rem] xl:mb-[16rem]">
         <img
           src="/images/stats.png"
           alt="Background"
@@ -257,10 +257,10 @@ export function HomePage() {
             hasAnimatedStatGraph ? "up-slide" : ""
           }`}
         />
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-7  z-10 py-10  absolute top-[50%] left-0 px-0 w-full justify-items-center box-border h-auto max-sm:relative max-sm:top-0 max-sm:left-0 max-sm:py-0 max-sm:px-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-7  z-10 py-10  absolute top-[50%] left-0 px-0 w-full justify-items-center box-border h-auto max-sm:relative max-sm:top-0 max-sm:left-0 max-sm:py-0 max-sm:px-0">
           <div
             ref={cardRef}
-            className={`flex flex-col w-full h-full gap-4 px-10 py-10 rounded-lg bg-blur  transition-all duration-700 ${
+            className={`flex flex-col w-full h-full gap-4 px-10 py-10 rounded-lg bg-blur  transition-all duration-700 md:h-[auto] lg:h-[22rem] box-border  ${
               hasAnimated ? "animate-car" : " "
             }`}
           >
@@ -282,7 +282,7 @@ export function HomePage() {
           <div
             data-aos="fade-in"
             ref={cardRef}
-            className={`flex flex-col w-full h-full gap-4 px-10 py-10 rounded-lg bg-blur  transition-all duration-700 ${
+            className={`flex flex-col w-full h-full gap-4 px-10 py-10 rounded-lg bg-blur  transition-all duration-700 md:h-[auto] lg:h-[22rem] box-border  ${
               hasAnimated ? "animate-car" : " "
             }`}
           >
@@ -304,7 +304,7 @@ export function HomePage() {
           <div
             data-aos="fade-in"
             ref={cardRef}
-            className={`flex flex-col w-full h-full gap-4 px-10 py-10 rounded-lg bg-blur  transition-all duration-700 ${
+            className={`flex flex-col w-full h-full gap-4 px-10 py-10 rounded-lg bg-blur  transition-all duration-700 md:h-[auto] lg:h-[22rem] box-border  ${
               hasAnimated ? "animate-car" : " "
             }`}
           >
@@ -328,7 +328,7 @@ export function HomePage() {
           <div
             data-aos="fade-in"
             ref={cardRef}
-            className={`flex flex-col w-full h-full gap-4 px-10 py-10 rounded-lg bg-blur  transition-all duration-700 ${
+            className={`flex flex-col w-full h-full gap-4 px-10 py-10 rounded-lg bg-blur  transition-all duration-700 md:h-[auto] lg:h-[22rem] box-border  ${
               hasAnimated ? "animate-car" : " "
             }`}
           >
@@ -352,7 +352,7 @@ export function HomePage() {
       </section>
 
       {/*   ---------------------- AI Leads Section ---------------------- */}
-      <section className="relative w-full h-auto mx-0 mt-10 overflow-x-visible bg-transparent shadow-lg mb-26 max-sm:px-4 max-sm:py-4 max-sm:mb-0">
+      <section className="relative w-full h-auto mx-0 mt-10 overflow-x-visible bg-transparent shadow-lg 2xl:mt-5 2xl:mb-26 max-sm:px-4 max-sm:py-4 max-sm:mb-0">
         <div className="flex flex-col items-center justify-center w-full h-full gap-4 mb-10">
           <h3 className="text-5xl font-light text-white max-sm:text-3xl">
             Real Problems. Real Solutions. Powered by AI
@@ -1470,7 +1470,7 @@ export function HomePage() {
               realities, empowering businesse.
             </p>
             <div className="flex flex-col items-start justify-start w-full h-full gap-5">
-              <div className="grid grid-cols-2 gap-5 ">
+              <div className="grid h-full grid-cols-2 gap-5">
                 <div className="flex flex-row items-center justify-start w-full h-full gap-4">
                   <img className="w-5 h-5" src="/images/check.png" alt="icon" />
                   <p className="text-white">AI-Powered Process</p>

@@ -164,13 +164,15 @@ export function HomePage() {
 
       {/*   ---------------------- Hero Section ---------------------- */}
       <section className="relative flex flex-col items-center w-full h-auto overflow-visible mt-28 max-sm:mt-10">
-        <div className="absolute top-[-7rem] left-0 z-10 flex items-center justify-center w-full h-[calc(100%+10rem)]  hero-video">
+        <div className="absolute top-[-7rem] left-0 z-10 flex items-center justify-center w-full h-[calc(100%+10rem)] hero-video">
           <video
             src="/videos/hero.mp4"
             autoPlay
             muted
             loop
+            playsInline
             className="relative object-cover w-full h-full"
+            preload="auto"
           ></video>
         </div>
         <div

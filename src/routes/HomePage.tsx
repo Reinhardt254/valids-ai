@@ -128,7 +128,7 @@ export function HomePage() {
   };
 
   const scriptURL =
-    "https://script.google.com/macros/s/AKfycbwJS3-4e8b3ISeWGJGjHg81FMONnpWri_zYmWIDdmd2wixsLCKGu8RBG93qqJqiLy1E/exec";
+    "https://script.google.com/macros/s/AKfycbzFxPM6awKJf6k4ftOAAOrxmm6_iNM0MnOASCQV0zuyxce5QRCJiPyl6M6d1yvHy8OW/exec";
   // const clientId = "AKfycbzQQyiJPWi29JbLpYKr16zGdrHtydXKx0e-2OXxuZXjuNgwKPIkl_ZWOWviOKAzWRyw"
 
   const onSubmit = async (data: FormData) => {

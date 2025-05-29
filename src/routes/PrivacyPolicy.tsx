@@ -1,18 +1,9 @@
-import { formatDate } from "@/lib/utils";
-import { useParams } from "react-router-dom";
-import DOMPurify from "dompurify";
+
 import { Separator } from "@/components/ui/separator";
 
 export default function PrivacyPolicy() {
   const heroImage = "/images/privacy-hero.png";
   const heroTitle = "Our Privacy Policy";
-
-  const author = {
-    name: "Dylan J Crow",
-    profile: { avatarUrl: "https://randomuser.me/api/portraits/men/32.jpg" },
-  };
-  const authorRole = "Associate";
-  const date = "29th May 2025";
 
   return (
     <div className="min-h-screen bg-[#07051A] text-white min-w-screen flex flex-col items-center justify-center  max-w-screen">
@@ -32,7 +23,7 @@ export default function PrivacyPolicy() {
       </div>
 
       {/* Main Content */}
-      <div className="px-4 py-12 mx-auto max-w-[1000px] w-[90%]">
+      <div className="px-4 py-12 mx-auto max-w-[1000px] w-[90%] max-sm:w-[95%] max-sm:px-1">
         <div className="mb-8">
           <span className="inline-block px-4 py-2 mb-4 text-sm font-semibold tracking-widest rounded-full bg-[#181A2A] text-white border border-[#2BFFFF1A]">
             Bring your business to the best value

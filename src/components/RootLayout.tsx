@@ -97,17 +97,25 @@ export function RootLayout() {
             </Link>
 
             <Link
-              to="#"
+              to="/privacy-policy"
               className="inline-flex items-center px-1 pt-1 text-sm font-medium text-white border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700"
             >
-              Blogs
+             Privacy Policy
             </Link>
 
             <Link
-              to="#"
+              to="/#contact-us-home"
               className="inline-flex items-center px-1 pt-1 text-sm font-medium text-white border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700"
             >
-              Contact Us
+             Contact Us
+            </Link>
+            
+
+            <Link
+              to="/how-it-works"
+              className="inline-flex items-center px-1 pt-1 text-sm font-medium text-white border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700"
+            >
+             How It Works
             </Link>
           </div>
 
@@ -165,9 +173,11 @@ export function RootLayout() {
                   <XIcon  className="w-8 h-8 text-white" />
               </div>
               <div className="flex flex-col items-center justify-start w-full h-full gap-3 pt-32">
-                <Link to="#" className="text-white">Home</Link>
-                <Link to="#" className="text-white">About</Link>
-                <Link to="#" className="text-white">Contact</Link>
+                <Link to="/" className="text-white">Home</Link>
+                <Link to="/about" className="text-white">About</Link>
+                <Link to="/privacy-policy" className="text-white">Privacy Policy</Link>
+                <Link to="/#contact-us-home" className="text-white">Contact</Link>
+                <Link to="/how-it-works" className="text-white">How It Works</Link>
                 <Link to="#" className="text-white">Pricing</Link>
                 <Link to="#" className="text-white">Marketplace</Link>
                 <Link to="#" className="text-white">Blogs</Link>

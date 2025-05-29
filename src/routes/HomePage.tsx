@@ -1456,6 +1456,7 @@ export function HomePage() {
 
       {/*   ---------------------- Transforming Vision into Reality Section ---------------------- */}
       <section
+        id="contact-us-home"
         ref={possibilitiesRef}
         className={`flex flex-col items-center justify-center w-full h-full gap-10 py-10 max-sm:pt-8`}
       >
@@ -1644,6 +1645,7 @@ export function HomePage() {
 
             <form
               className="flex flex-col items-start justify-start w-full h-full gap-5"
+         
               onSubmit={handleSubmit(onSubmit)}
             >
               <div className="flex flex-row items-start justify-start w-full h-auto gap-5">

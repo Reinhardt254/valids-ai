@@ -12,9 +12,9 @@ export const router = createBrowserRouter([
     element: <RootLayout />,
     children: [
       { index: true, element: <HomePage /> },
-      { path: "about", element: <AboutPage /> },
-      { path: "privacy-policy", element: <PrivacyPolicy /> },
-      { path: "how-it-works", element: <HowItWorks /> },
+      { path: "/about", element: <AboutPage /> },
+      { path: "/privacy-policy", element: <PrivacyPolicy /> },
+      { path: "/how-it-works", element: <HowItWorks /> },
     ],
   },
 ]);

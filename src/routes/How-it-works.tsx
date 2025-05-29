@@ -198,7 +198,7 @@ export function HowItWorks() {
         <div className="flex flex-col items-start justify-start w-full h-full gap-10 pt-6 xl:flex-row xl:gap-20 md:pt-10">
           {/* Left column - process steps with toggle functionality */}
           <div className="flex flex-col items-center justify-center w-full xl:w-[60%] gap-6 md:gap-10 h-full">
-            {stepsData.map((step, index) => (
+            {stepsData.map((step) => (
               <div key={step.id} className="w-full">
                 {/* Step Header */}
                 <div

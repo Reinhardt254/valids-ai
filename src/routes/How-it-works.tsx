@@ -1,12 +1,23 @@
 import { Button } from "@/components/ui/button";
-import { MoveRight } from "lucide-react";
+import { MoveRight, ArrowDownRightIcon, ArrowUpRightIcon } from "lucide-react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, FreeMode } from "swiper/modules";
+import { stepsData } from "@/lib/stepsData";
 
 import "swiper/swiper-bundle.css";
+import { useState } from "react";
+
 
 export function HowItWorks() {
+  const [openStep, setOpenStep] = useState<number | null>(1); // Start with step 2 open (AI Validates)
+  const [activeStep, setActiveStep] = useState<number | null>(1);
+
+  const toggleStep = (stepId: number) => {
+    setOpenStep(openStep === stepId ? null : stepId);
+    setActiveStep(stepId === activeStep ? null : stepId);
+  };
+
   return (
     <main className="flex flex-col items-center w-full min-h-screen">
       {/* Hero Section */}
@@ -179,201 +190,108 @@ export function HowItWorks() {
         </div>
       </section>
 
-      {/* How it works section */}
+      {/* How it works section - NEW TOGGLE VERSION */}
       <section className="flex flex-col items-center justify-center w-[95%] md:w-[90%] h-full my-10 md:my-20 px-4">
         <h2 className="pb-6 text-3xl font-bold text-center text-white md:pb-10 md:text-4xl lg:text-5xl">
           How it works
         </h2>
         <div className="flex flex-col items-start justify-start w-full h-full gap-10 pt-6 xl:flex-row xl:gap-20 md:pt-10">
-          {/* Left column - process steps */}
+          {/* Left column - process steps with toggle functionality */}
           <div className="flex flex-col items-center justify-center w-full xl:w-[60%] gap-6 md:gap-10 h-full">
-            {/* Step 1 */}
-            <div className="flex flex-col items-start justify-between w-full h-full gap-3 sm:flex-row sm:items-center sm:gap-5">
-              <div className="flex flex-col items-start justify-center w-full h-full gap-3 md:gap-5">
-                <h3 className="text-lg text-gray-400 md:text-2xl">
-                  VALID LEADS
-                </h3>
-                <p className="text-2xl text-gray-200 md:text-3xl lg:text-4xl">
-                  Upload or Sync Your <br className="hidden sm:block" /> Leads
-                </p>
-                <p className="text-sm text-gray-200 md:text-base">
-                  Easly Bring in Data From Your CRM, Meta Ads Account, Or Upload
-                  CSVs/PDFs....
-                </p>
-              </div>
-              <MoveRight className="w-6 h-6 md:w-auto md:h-10 text-[#5CE4CF] flex-shrink-0" />
-            </div>
-
-            {/* Step 2 */}
-            <div className="flex flex-col items-start justify-between w-full h-full gap-3 sm:flex-row sm:items-center sm:gap-5">
-              <div className="flex flex-col items-start justify-center w-full h-full gap-3 md:gap-5">
-                <h3 className="text-lg text-gray-400 md:text-xl">
-                  VALID LEADS
-                </h3>
-                <p className="text-2xl text-gray-200 md:text-3xl lg:text-4xl purple-text">
-                  AI Validates, Scores <br className="hidden sm:block" /> &
-                  Segments
-                </p>
-              </div>
-              <MoveRight className="w-6 h-6 md:w-auto md:h-10 text-[#5CE4CF] flex-shrink-0" />
-            </div>
-
-            {/* Detailed explanation box */}
-            <div className="flex flex-col items-start justify-start w-full h-full gap-2 border-2 border-[#73249aa6] rounded-3xl p-4 md:p-8">
-              <p className="text-sm text-gray-200 md:text-base">
-                Once your lead data is uploaded or synced, our intelligent AI
-                engine gets to work behind the scenes — transforming messy lists
-                into high-performing lead pipelines. Here's what happens under
-                the hood (without giving away backend tech)
-              </p>
-
-              <h4 className="mt-2 text-sm font-bold text-gray-200 md:text-base">
-                Duplicate Detection:
-              </h4>
-              <p className="text-sm text-gray-200 md:text-base">
-                The AI scans for and removes duplicate entries, even when names
-                or fields are slightly misspelled or structured differently —
-                saving you from chasing the same lead twice.
-              </p>
-
-              <h4 className="mt-2 text-sm font-bold text-gray-200 md:text-base">
-                Inconsistency Resolution:
-              </h4>
-              <p className="text-sm text-gray-200 md:text-base">
-                It intelligently detects and corrects mismatched job titles,
-                incomplete company info, or invalid email formats — ensuring
-                your leads are clean and standardized.
-              </p>
-
-              <h4 className="mt-2 text-sm font-bold text-gray-200 md:text-base">
-                Behavioral & Contextual Analysis
-              </h4>
-              <p className="text-sm text-gray-200 md:text-base">
-                Using patterns like job seniority, industry alignment, company
-                size, and engagement signals, the AI understands the real
-                potential behind each lead.
-              </p>
-
-              <h4 className="mt-2 text-sm font-bold text-gray-200 md:text-base">
-                Smart Categorization:
-              </h4>
-              <p className="mb-2 text-sm text-gray-200 md:text-base">
-                Each lead is scored and placed into one of three intelligent
-                segments
-              </p>
-
-              <ul className="flex flex-col gap-2 pl-5 text-gray-200 list-disc">
-                <li>
-                  <h4 className="pr-3 text-sm font-bold text-gray-200 md:text-base">
-                    Hot Leads:{" "}
-                    <span className="font-light text-gray-200">
-                      High intent, complete info, matched job roles — ready for
-                      outreach.
+            {stepsData.map((step, index) => (
+              <div key={step.id} className="w-full">
+                {/* Step Header */}
+                <div
+                  className="flex flex-col items-start justify-between w-full h-full gap-3 cursor-pointer sm:flex-row sm:items-center sm:gap-5 group"
+                  onClick={() => {
+                    toggleStep(step.id);
+                  }}
+                >
+                  <div className="flex flex-col items-start justify-center w-full h-full gap-3 md:gap-5">
+                    <h3
+                      className={`text-lg text-gray-400 md:text-xl transition-colors group-hover:text-[#5CE4CF] ${
+                        step.id == activeStep ? "!text-[#5CE4CF]" : ""
+                      }`}
+                    >
+                      {step.category}
+                    </h3>
+                    <p
+                      className={`text-2xl md:text-3xl lg:text-4xl transition-colors group-hover:text-purple-600  ${
+                        step.id == activeStep ? "!text-purple-600" : ""
+                      }  text-white `}
+                    >
+                      {step.title}
+                    </p>
+                    <p className="text-sm text-gray-200 transition-colors md:text-base group-hover:text-gray-100">
+                      {step.description}
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <MoveRight className="w-6 h-6 md:w-auto md:h-10 text-[#5CE4CF] flex-shrink-0 transition-transform group-hover:translate-x-1" />
+                    <span className="flex-shrink-0 text-white transition-transform duration-300 transform">
+                      {openStep === step.id ? (
+                        <div className="flex items-center justify-center w-6 h-6 border-white rounded-full md:w-8 md:h-8 border-1">
+                          <ArrowUpRightIcon className="w-3 h-3 md:w-4 md:h-4" />
+                        </div>
+                      ) : (
+                        <div className="flex items-center justify-center w-6 h-6 border-white rounded-full md:w-8 md:h-8 border-1">
+                          <ArrowDownRightIcon className="w-3 h-3 md:w-4 md:h-4" />
+                        </div>
+                      )}
                     </span>
-                  </h4>
-                </li>
+                  </div>
+                </div>
 
-                <li>
-                  <h4 className="text-sm font-bold text-gray-200 md:text-base">
-                    Warm Leads: {""}
-                    <span className="font-light text-gray-200">
-                      Moderate potential, some gaps — good candidates for
-                      nurturing.
-                    </span>
-                  </h4>
-                </li>
+                {/* Detailed Explanation - Expandable */}
+                <div
+                  className={`transition-all duration-500 ease-in-out overflow-hidden ${
+                    openStep === step.id
+                      ? "max-h-[2000px] opacity-100 mt-6"
+                      : "max-h-0 opacity-0 mt-0"
+                  }`}
+                >
+                  <div className="flex flex-col items-start justify-start w-full h-full gap-2 border-2 border-[#73249aa6] rounded-3xl p-4 md:p-8 bg-gradient-to-br from-[#1a1a2e] to-[#16213e]">
+                    <p className="text-sm text-gray-200 md:text-base">
+                      {step.detailedExplanation.intro}
+                    </p>
 
-                <li>
-                  <h4 className="text-sm font-bold text-gray-200 md:text-base">
-                    Cold Leads:{" "}
-                    <span className="font-light text-gray-200">
-                      Incomplete, unqualified, or mismatched — flagged for
-                      review or re-engagement.
-                    </span>
-                  </h4>
-                </li>
-              </ul>
+                    {step.detailedExplanation.sections.map(
+                      (section, sectionIndex) => (
+                        <div key={sectionIndex} className="w-full">
+                          <h4 className="mt-2 text-sm font-bold text-gray-200 md:text-base">
+                            {section.title}
+                          </h4>
+                          <p className="text-sm text-gray-200 md:text-base">
+                            {section.content}
+                          </p>
 
-              <h4 className="mt-2 text-sm font-bold text-gray-200 md:text-base">
-                Lead Quality Score 0–100
-              </h4>
-              <p className="text-sm text-gray-200 md:text-base">
-                Each lead receives a real-time quality score based on accuracy,
-                completeness, and strategic fit — helping your team prioritize
-                like pros.
-              </p>
-            </div>
-
-            {/* Remaining steps */}
-            <div className="flex flex-col items-start justify-between w-full h-full gap-3 sm:flex-row sm:items-center sm:gap-5">
-              <div className="flex flex-col items-start justify-center w-full h-full gap-3 md:gap-5">
-                <h3 className="text-lg text-gray-400 md:text-xl">
-                  VALID LEADS
-                </h3>
-                <p className="text-2xl text-gray-200 md:text-3xl">
-                  Real-Time Integrations & <br className="hidden sm:block" />{" "}
-                  Outreach
-                </p>
-                <p className="text-sm text-gray-200 md:text-base">
-                  Connect with your CRM and ad tools in real time. We push
-                  enriched,.....
-                </p>
+                          {section.subSections && (
+                            <ul className="flex flex-col gap-2 pl-5 mt-2 text-gray-200 list-disc">
+                              {section.subSections.map(
+                                (subSection, subIndex) => (
+                                  <li key={subIndex}>
+                                    <h4 className="pr-3 text-sm font-bold text-gray-200 md:text-base">
+                                      {subSection.title}{" "}
+                                      <span className="font-light text-gray-200">
+                                        {subSection.content}
+                                      </span>
+                                    </h4>
+                                  </li>
+                                )
+                              )}
+                            </ul>
+                          )}
+                        </div>
+                      )
+                    )}
+                  </div>
+                </div>
               </div>
-              <MoveRight className="w-6 h-6 md:w-auto md:h-10 text-[#5CE4CF] flex-shrink-0" />
-            </div>
+            ))}
 
-            <div className="flex flex-col items-start justify-between w-full h-full gap-3 sm:flex-row sm:items-center sm:gap-5">
-              <div className="flex flex-col items-start justify-center w-full h-full gap-3 md:gap-5">
-                <h3 className="text-lg text-gray-400 md:text-xl">
-                  VALID LEADS
-                </h3>
-                <p className="text-2xl text-gray-200 md:text-3xl">
-                  Upload or Sync Your <br className="hidden sm:block" /> Leads
-                </p>
-                <p className="text-sm text-gray-200 md:text-base">
-                  Easly Bring in Data From Your CRM, Meta Ads Account, Or Upload
-                  CSVs/PDFs....
-                </p>
-              </div>
-              <MoveRight className="w-6 h-6 md:w-auto md:h-10 text-[#5CE4CF] flex-shrink-0" />
-            </div>
-
-            <div className="flex flex-col items-start justify-between w-full h-full gap-3 sm:flex-row sm:items-center sm:gap-5">
-              <div className="flex flex-col items-start justify-center w-full h-full gap-3 md:gap-5">
-                <h3 className="text-lg text-gray-400 md:text-xl">
-                  VALID LEADS
-                </h3>
-                <p className="text-2xl text-gray-200 md:text-3xl">
-                  Track Performance with <br className="hidden sm:block" />{" "}
-                  Smart Dashboard
-                </p>
-                <p className="text-sm text-gray-200 md:text-base">
-                  Get a clear view of your top-performing leads, validation
-                  history, and.......
-                </p>
-              </div>
-              <MoveRight className="w-6 h-6 md:w-auto md:h-10 text-[#5CE4CF] flex-shrink-0" />
-            </div>
-
-            <div className="flex flex-col items-start justify-between w-full h-full gap-3 sm:flex-row sm:items-center sm:gap-5">
-              <div className="flex flex-col items-start justify-center w-full h-full gap-3 md:gap-5">
-                <h3 className="text-lg text-gray-400 md:text-xl">
-                  VALID LEADS
-                </h3>
-                <p className="text-2xl text-gray-200 md:text-3xl">
-                  Sell to <br className="hidden sm:block" />
-                  Marketplace
-                </p>
-                <p className="text-sm text-gray-200 md:text-base">
-                  Got great data? Sell it. Our system lets you list verified
-                  leads.......
-                </p>
-              </div>
-              <MoveRight className="w-6 h-6 md:w-auto md:h-10 text-[#5CE4CF] flex-shrink-0" />
-            </div>
-
-            <div className="flex flex-row items-center justify-start w-full h-full gap-3 md:gap-5">
-              <p className="text-xs text-gray-400 md:text-sm">NEXT JOBS</p>{" "}
+            {/* Next Jobs */}
+            <div className="flex flex-row items-center justify-start w-full h-full gap-3 mt-6 md:gap-5">
+              <p className="text-xs text-gray-400 md:text-sm">NEXT JOBS</p>
               <MoveRight className="w-6 h-6 md:w-auto md:h-10 text-[#5CE4CF]" />
             </div>
           </div>
